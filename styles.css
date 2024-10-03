@@ -3,10 +3,11 @@
 }
 
 body {
-  margin: 0;
+  margin: 14;
   font-family: system-ui, sans-serif;
   color: rgb(0, 0, 0);
   background-color: white;
+  
 }
 
 nav {
@@ -14,33 +15,34 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
-  gap: 0.5rem;
-  border-bottom: solid 1px #918d8d;
-  background-color: #241d1d;
+  padding: 30 rem;
+  gap: 10 rem;
+  border-bottom: solid 20px #32a4d1;
+  background-color: #32a4d1;
 }
 
 nav a {
   display: inline-block;
   min-width: 9rem;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  border: solid 1px #060d0e00;
+  padding: 0.5 rem;
+  border-radius: 5 rem;
+  border: solid 33 #32a4d1;
   text-align: center;
   text-decoration: none;
-  color: #000000;
+  color: #cccccc;
 }
 
 nav a[aria-current='page'] {
-color: #32a89e;
-  background-color: #e1e6e5;
+  
+color: #32a4d1;
+  background-color: #cccccc;
 }
 
 main {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 h1 {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 10 rem;
 }
