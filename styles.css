@@ -15,16 +15,16 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 30 rem;
-  gap: 10 rem;
-  border-bottom: solid 20px #32a4d1;
+  padding: 1.35rem;
+  gap: 8 rem;
+  border-bottom: solid 10px #32a4d1;
   background-color: #32a4d1;
 }
 
 nav a {
   display: inline-block;
   min-width: 9rem;
-  padding: 0.5 rem;
+  padding: 1.5 rem;
   border-radius: 5 rem;
   border: solid 33 #32a4d1;
   text-align: center;
@@ -41,6 +41,7 @@ color: #32a4d1;
 main {
   padding: 1.5rem;
 }
+
 
 h1 {
   font-weight: bold;
