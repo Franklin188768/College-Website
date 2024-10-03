@@ -32,8 +32,8 @@ nav a {
 }
 
 nav a[aria-current='page'] {
-  color: #000;
-  background-color: #7a4a4a;
+color: #32a89e;
+  background-color: #e1e6e5;
 }
 
 main {
