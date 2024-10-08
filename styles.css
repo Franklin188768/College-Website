@@ -47,3 +47,27 @@ h1 {
   font-weight: bold;
   font-size: 10 rem;
 }
+
+.homepagegrid {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#box1 { 
+  padding: 1rem;
+  background-color: rgb(70, 70, 172);
+}
+#box2 {
+  padding: 1rem;
+  background-color: rgb(141, 56, 56);
+}
+#box3 {
+  padding: 1rem;
+  background-color: rgb(47, 165, 159);
+}
+#collegeimage{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
