@@ -52,7 +52,10 @@ h1 {
 .homepagegrid {
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  padding-right: 5px;
 }
 
 #box1 { 
