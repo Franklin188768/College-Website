@@ -14,34 +14,57 @@
     <a href="/">What?</a>
     <a href="/page2.html" aria-current="page">Why?</a>
   </nav>
+
   <main>
     <h1>Why?</h1>
     <p>You might feel that college isn't really important or that it's not the right fit for you, or maybe you haven't
-      considered it much at all. Regardless, I think it's worth giving it a chance.
-    </p>
-    <div>
-      <li>
-        <a href="https://www.mass.edu/osfa/programs/masseducate.asp">community colleges</a> are free in Ma,
-      </li>
-      <li>
-        college can be a gateway to tons of great memories
-      </li>
-      <li> The higher your education, the more opportunites that arise
-      </li>
-    </div>
-    <p>
-      The only way to know if you're fully prepared is starting a
-      <a href="https://www.etsy.com/listing/506314267/college-application-planner-15-page"> planner </a>
-    </p>
+      considered it much at all. Regardless, I think it's worth giving it a chance.</p>
+
+    <ul>
+      <li><a href="https://www.mass.edu/osfa/programs/masseducate.asp">Community colleges</a> are free in MA.</li>
+      <li>College can be a gateway to tons of great memories.</li>
+      <li>The higher your education, the more opportunities arise.</li>
+    </ul>
+
+    <p>The only way to know if you're fully prepared is by starting a <a
+        href="https://www.etsy.com/listing/506314267/college-application-planner-15-page">planner</a>.</p>
+
     <div>
       <form>
-        <label>
-          Email: <input type="text" name="email" id="email">
-        </label>
+        <fieldset>
+          <legend>What aspects of college are most important to you?</legend>
+
+          <label>
+            <input type="checkbox" name="collegeFactors" value="Community Colleges">
+            Community Colleges (affordability, accessibility)
+          </label><br>
+
+          <label>
+            <input type="checkbox" name="collegeFactors" value="Memories">
+            College memories (friends, experiences, networking)
+          </label><br>
+
+          <label>
+            <input type="checkbox" name="collegeFactors" value="Opportunities">
+            Career opportunities and growth
+          </label><br>
+
+          <label>
+            <input type="checkbox" name="collegeFactors" value="Preparation">
+            Planning and preparation for success
+          </label><br>
+
+          <button type="submit">Submit</button>
+        </fieldset>
       </form>
     </div>
   </main>
+
+  <div>
+    <img style="position: absolute;" src="/images/planning pic.webp" width="300px" height="400px"
+      alt="Planning for college image">
+  </div>
+
 </body>
-<div>
-  <img style="position: absolute;" src="/images/planning pic.webp" width="300px" height="400px">
-</div>
+
+</html>
