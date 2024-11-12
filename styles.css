@@ -3,7 +3,7 @@
 }
 
 body {
-  margin: 14;
+  margin: 14px;
   font-family: system-ui, sans-serif;
   color: rgb(0, 0, 0);
   background-color: #00000038;
@@ -16,7 +16,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 1.35rem;
-  gap: 8 rem;
+  gap: 1.5rem;
   border-bottom: solid 10px #000000;
   background-color: #000000b9;
 }
@@ -24,13 +24,12 @@ nav {
 nav a {
   display: inline-block;
   min-width: 9rem;
-  padding: 1.5 rem;
-  border-radius: 5 rem;
-  border: solid 33 #000000;
+  padding: 1.5rem;
+  border-radius: 5rem;
+  border: solid 3px #000000;
   text-align: center;
-  text-decoration: none;
-  color: #000000;
-  gap: 8rem;
+  text-decoration: underline #000000;
+  gap: 1.5rem;
 }
 
 nav a[aria-current='page'] {
@@ -46,7 +45,7 @@ main {
 
 h1 {
   font-weight: bold;
-  font-size: 10 rem;
+  font-size: 2rem;
 }
 
 .homepagegrid {
@@ -61,31 +60,35 @@ h1 {
 #box1 {
   padding: 1rem;
   background-color: rgb(70, 70, 172);
-  border: medium solid black
+  border: medium solid black;
 }
 
 #box2 {
   padding: 1rem;
   background-color: rgb(141, 56, 56);
-  border: medium solid black
+  border: medium solid black;
 }
 
 #box3 {
   padding: 1rem;
   background-color: rgb(47, 165, 159);
-  border: medium solid black
+  border: medium solid black;
 }
 
 #collegeimage {
-  display: inline-block row;
-  justify-content: right;
+  display: inline-flex;
+  justify-content: center;
   margin-top: 0rem;
-  box-sizing: content-box 0rem;
-  Border: medium solid black
+  box-sizing: content-box;
+  Border: medium solid black;
 }
 
 #box4 {
-  padding: 1rem;
+  padding: 2rem;
   background-color: rgba(0, 0, 0, 0.459);
-  border: medium solid black
+  border: medium solid black;
+}
+
+nav {
+  background-color: #464545;
 }
