@@ -1,4 +1,12 @@
 console.log('Hello!');
+const todaysdate = () => {
+    let d = new Date();
+    return "Today's date is " + d.toLocaleDateString();
+}
+
+const dateblock = document.getElementById("Dateblock");
+dateblock.innerText = todaysdate();
+
 
 document.getElementById("loginForm").addEventListener("submit", formsubmission);
 
