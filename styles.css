@@ -138,3 +138,7 @@ button:hover {
   align-content: center;
   flex-wrap: wrap;
 }
+
+body {
+  margin-bottom: 100px;
+}

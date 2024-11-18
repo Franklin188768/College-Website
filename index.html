@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width" , initial-scale="1" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>What?</title>
    <link rel="stylesheet" href="styles.css" />
    <script type="module" src="script.js"></script>
@@ -11,13 +11,14 @@
 </head>
 
 <body>
-   <div style="background-color: rgba(15, 15, 15, 0.288);">
+   <div class="content-wrapper">
       <nav>
          <a href="/" aria-current="page">What</a>
          <a href="/page2.html">Why?</a>
          <a href="Contactme.html"> Contacts </a>
          <a href="Home.html"> Home</a>
       </nav>
+
       <main>
          <h1>College, <small>What to do</small></h1>
          <p>
@@ -48,9 +49,55 @@
             <img src="images/cropped-Berkshire_CampusPhoto_NBBJ_BCC-0011.webp" width="500px" height="280px" />
          </div>
       </main>
-   </div>
-</body>
-<br>
 
+      <!-- Move button here, inside content wrapper for better organization -->
+      <button id="toggleButton">Toggle Dark Mode</button>
+   </div>
+
+   <script>
+      const toggleButton = document.getElementById('toggleButton');
+
+      // Add event listener for the toggle button
+      toggleButton.addEventListener('click', function () {
+         if (document.body.classList.contains('dark-mode')) {
+            // Remove dark mode
+            document.body.classList.remove('dark-mode');
+            toggleButton.style.backgroundColor = '#f0f0f0';
+            toggleButton.style.color = '#000';
+            toggleButton.textContent = 'Toggle Dark Mode';
+         } else {
+            // Add dark mode
+            document.body.classList.add('dark-mode');
+            toggleButton.style.backgroundColor = '#333';
+            toggleButton.style.color = '#fff';
+            toggleButton.textContent = 'Toggle Light Mode';
+         }
+      });
+
+      // Add custom CSS for dark mode
+      const style = document.createElement('style');
+      style.textContent = `
+            body.dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            body.dark-mode h1, body.dark-mode p {
+                color: #ffffff;
+            }
+
+            body.dark-mode a {
+                color: #bb86fc;
+            }
+            
+            /* Optional: Style the button in dark mode */
+            body.dark-mode #toggleButton {
+                background-color: #333;
+                color: #fff;
+            }
+        `;
+      document.head.appendChild(style);
+   </script>
+</body>
 
 </html>
