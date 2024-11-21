@@ -16,4 +16,3 @@ function formsubmission(event) {
     window.location.href = "page2.html";
 }
 
-

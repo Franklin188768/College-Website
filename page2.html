@@ -16,12 +16,13 @@
 
 <body>
   <nav>
-    <a href="/">What?</a>
+    <a href="Home.html"> Home</a>
+    <a href="/index.html">What?</a>
     <a href="/page2.html" aria-current="page">Why?</a>
     <a href="Contactme.html"> Contacts </a>
-    <a href="Home.html"> Home</a>
-  </nav>
 
+  </nav>
+  
   <main>
     <h1>Why?</h1>
     <p>You might feel that college isn't really important or that it's not the right fit for you, or maybe you haven't
@@ -43,18 +44,18 @@
           <label>
             <input type="checkbox" name="collegeFactors" value="Community Colleges">
             Community Colleges (affordability, accessibility)
-          </label><br>
-
+          </label>
+          <br>
           <label>
             <input type="checkbox" name="collegeFactors" value="Memories">
             College memories (friends, experiences, networking)
-          </label><br>
-
+          </label>
+          <br>
           <label>
             <input type="checkbox" name="collegeFactors" value="Opportunities">
             Career opportunities and growth
-          </label><br>
-
+          </label>
+          <br>
           <label>
             <input type="checkbox" name="collegeFactors" value="Preparation">
             Planning and preparation for success
@@ -69,9 +70,23 @@
       <div class="image-container">
         <img src="/images/planning pic.webp" width="300px" height="400px" />
       </div>
-    </div>
+    </div> States with free college institutes,
+    Where do you go?
+    <select id="States">
+      <option value="">Select a state</option>
+  </select>
 
-    </div>
+  <script>
+      const Statestype = ["Massachusetts", "Maryland", "Mississippi", "Missouri", "other"];
+      const select = document.getElementById("States");
+
+      Statestype.forEach((state) => {
+          const option = document.createElement("option");
+          option.value = state;
+          option.text = state;
+          select.appendChild(option);
+      });
+  </script>
   </main>
 
 

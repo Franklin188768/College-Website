@@ -13,10 +13,10 @@
 <body>
    <div class="content-wrapper">
       <nav>
-         <a href="/" aria-current="page">What</a>
+         <a href="/Home.html">Home</a>
+         <a href="/index.html" aria-current="page">What</a>
          <a href="/page2.html">Why?</a>
-         <a href="Contactme.html"> Contacts </a>
-         <a href="Home.html"> Home</a>
+         <a href="/Contactme.html">Contacts</a>
       </nav>
 
       <main>
@@ -50,38 +50,32 @@
          </div>
       </main>
 
-      <!-- Move button here, inside content wrapper for better organization -->
       <button id="toggleButton">Toggle Dark Mode</button>
    </div>
 
    <script>
-      const toggleButton = document.getElementById('toggleButton');
 
-      // Add event listener for the toggle button
+      const toggleButton = document.getElementById('toggleButton');
       toggleButton.addEventListener('click', function () {
+
          if (document.body.classList.contains('dark-mode')) {
-            // Remove dark mode
             document.body.classList.remove('dark-mode');
             toggleButton.style.backgroundColor = '#f0f0f0';
             toggleButton.style.color = '#000';
             toggleButton.textContent = 'Toggle Dark Mode';
          } else {
-            // Add dark mode
             document.body.classList.add('dark-mode');
             toggleButton.style.backgroundColor = '#333';
             toggleButton.style.color = '#fff';
             toggleButton.textContent = 'Toggle Light Mode';
          }
       });
-
-      // Add custom CSS for dark mode
       const style = document.createElement('style');
       style.textContent = `
             body.dark-mode {
                 background-color: #121212;
                 color: #ffffff;
             }
-
             body.dark-mode h1, body.dark-mode p {
                 color: #ffffff;
             }
