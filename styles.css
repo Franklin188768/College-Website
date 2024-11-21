@@ -142,3 +142,10 @@ button:hover {
 body {
   margin-bottom: 100px;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+}

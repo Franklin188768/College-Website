@@ -15,4 +15,7 @@ function formsubmission(event) {
     console.log("Form submitted!");
     window.location.href = "page2.html";
 }
+const darkModeToggle = document.querySelector(".js-toggle-mode");
+
+
 
