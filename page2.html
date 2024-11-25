@@ -22,7 +22,7 @@
     <a href="Contactme.html"> Contacts </a>
 
   </nav>
-  
+
   <main>
     <h1>Why?</h1>
     <p>You might feel that college isn't really important or that it's not the right fit for you, or maybe you haven't
@@ -72,21 +72,22 @@
       </div>
     </div> States with free college institutes,
     Where do you go?
+
     <select id="States">
       <option value="">Select a state</option>
-  </select>
+    </select>
 
-  <script>
+    <script>
       const Statestype = ["Massachusetts", "Maryland", "Mississippi", "Missouri", "other"];
       const select = document.getElementById("States");
 
       Statestype.forEach((state) => {
-          const option = document.createElement("option");
-          option.value = state;
-          option.text = state;
-          select.appendChild(option);
+        const option = document.createElement("option");
+        option.value = state;
+        option.text = state;
+        select.appendChild(option);
       });
-  </script>
+    </script>
   </main>
 
 
