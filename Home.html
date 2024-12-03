@@ -3,53 +3,101 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Contact me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What?</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
     <script src="https://kit.fontawesome.com/c21d4dc2a2.js" crossorigin="anonymous"></script>
     <style>
-        nav {
-            background-color: #464545;
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        body.dark-mode h1,
+        body.dark-mode p {
+            color: #ffffff;
+        }
+
+        body.dark-mode a {
+            color: #bb86fc;
+        }
+
+        body.dark-mode #toggleButton {
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1 small {
+            font-size: 0.6em;
+            font-weight: normal;
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <a href="/Home.html" aria-current="page">Home</a>
-        <a href="/index.html">What</a>
-        <a href="/page2.html">Why?</a>
-        <a href="/Contactme.html"> Contacts </a>
+    <div class="content-wrapper">
+        <header>
+            <nav>
+                <a href="/Home.html">Home</a>
+                <a href="/index.html" aria-current="page">What</a>
+                <a href="/page2.html">Why?</a>
+                <a href="/Contactme.html">Contacts</a>
+            </nav>
+        </header>
 
-    </nav>
+        <main>
+            <h1>College, <small>What to do</small></h1>
+            <p>
+                <em>Deciding what I want to major in has been the hardest so far: IT, psychology, or even forensics. I
+                    want to do all of those, but in what order? How will I go about it? Where will I go for
+                    college?</em>
+            </p>
 
-    <div id="Dateblock">
+            <h2>My Choice In Majors</h2>
+            <ol>
+                <li><em>IT</em></li>
+                <li><em>Psychology</em></li>
+                <li><em>Forensic science</em></li>
+            </ol>
+
+            <p><em>What goes into picking a major?</em></p>
+            <p><em>First, narrow down your choices.</em></p>
+
+            <div class="homepagegrid">
+                <div id="box1">IT Major</div>
+                <div id="box2">Psychology</div>
+                <div id="box3">Forensic science</div>
+            </div>
+
+            <br>
+
+            <div id="collegeimage">
+                <figure>
+                    <img src="images/Northshorecc image.jpg" width="500px" height="280px"
+                        alt="North Shore Community College">
+                    <img src="/images/salem state image.jpg" width="500px" height="280px" alt="Salem State University">
+                    <img src="images/cropped-Berkshire_CampusPhoto_NBBJ_BCC-0011.webp" width="500px" height="280px"
+                        alt="Berkshire Community College">
+                </figure>
+            </div>
+        </main>
+
+        <button id="toggleButton" aria-label="Toggle dark mode">Toggle Dark Mode</button>
     </div>
-    <br>
-    <div class="container">
 
-        <h1>Free community college is coming to Massachusetts</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-BfsrHgXkn0?si=3tVTu0MSRu1Xd9wO"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-    <div class="container">
-        <form id="loginForm" onsubmit="formsubmission(event)">
-            <label for="formname">Your Name:</label>
-            <input type="text" id="formname" name="formname" required placeholder="Enter your name" />
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        toggleButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+        });
 
-            <label for="formpassword">Password:</label>
-            <input type="password" id="formpassword" name="formpassword" required placeholder="Enter your password" />
-            <Button type="submit">Submit</Button>
-        </form>
-
-
-    </div>
-
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+        }
+    </script>
 </body>
-
 
 </html>

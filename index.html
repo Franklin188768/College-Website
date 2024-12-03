@@ -3,94 +3,87 @@
 
 <head>
    <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>What?</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Contact Me</title>
    <link rel="stylesheet" href="styles.css" />
    <script type="module" src="script.js"></script>
    <script src="https://kit.fontawesome.com/c21d4dc2a2.js" crossorigin="anonymous"></script>
+   <style>
+      nav {
+         background-color: #464545;
+         padding: 10px;
+      }
+
+      nav a {
+         color: #ffffff;
+         text-decoration: none;
+         margin-right: 15px;
+      }
+
+      iframe {
+         border: none;
+      }
+
+      button {
+         margin-top: 10px;
+         padding: 10px 20px;
+         background-color: #007bff;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      button:hover {
+         background-color: #0056b3;
+      }
+   </style>
 </head>
 
 <body>
-   <div class="content-wrapper">
-      <nav>
-         <a href="/Home.html">Home</a>
-         <a href="/index.html" aria-current="page">What</a>
-         <a href="/page2.html">Why?</a>
-         <a href="/Contactme.html">Contacts</a>
-      </nav>
+   <!-- Navigation Menu -->
+   <nav>
+      <a href="/Home.html" aria-current="page">Home</a>
+      <a href="/index.html">What</a>
+      <a href="/page2.html">Why?</a>
+      <a href="/Contactme.html">Contacts</a>
+   </nav>
 
-      <main>
-         <h1>College, <small>What to do</small></h1>
-         <p>
-            <em>Deciding what I want to major in has been the hardest so far: IT, psychology, or even forensics. I want
-               to do all of those, but in what order? How will I go about it? Where will I go for college?</em>
-         </p>
-         <ol>
-            <strong>My Choice In Majors</strong>
-            <li><em>IT</em></li>
-            <li><em>Psychology</em></li>
-            <li><em>Forensic science</em></li>
-         </ol>
-         <p>
-            <em>What goes into picking a major?</em>
-         </p>
-         <p><em>First, narrow down your choices.</em></p>
+   <main>
+      <!-- Date Block (Empty for now, can be populated dynamically if needed) -->
+      <div id="Dateblock"></div>
 
-         <div class="homepagegrid">
-            <div id="box1">IT Major</div>
-            <div id="box2">Psychology</div>
-            <div id="box3">Forensic science</div>
-         </div>
-         <br>
-         <div id="collegeimage">
-            <div id="box4"></div>
-            <img src="images/Northshorecc image.jpg" width="500px" height="280px" />
-            <img src="/images/salem state image.jpg" width="500px" height="280px" />
-            <img src="images/cropped-Berkshire_CampusPhoto_NBBJ_BCC-0011.webp" width="500px" height="280px" />
-         </div>
-      </main>
+      <br>
 
-      <button id="toggleButton">Toggle Dark Mode</button>
-   </div>
+      <!-- Video Section -->
+      <div class="container">
+         <h1>Free community college is coming to Massachusetts</h1>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/-BfsrHgXkn0?si=3tVTu0MSRu1Xd9wO"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+         </iframe>
+      </div>
+
+      <!-- Form Section -->
+      <div class="container">
+         <h2>Login Form</h2>
+         <form id="loginForm" onsubmit="formsubmission(event)">
+            <label for="formname">Your Name:</label>
+            <input type="text" id="formname" name="formname" required placeholder="Enter your name" />
+
+            <label for="formpassword">Password:</label>
+            <input type="password" id="formpassword" name="formpassword" required placeholder="Enter your password" />
+
+            <button type="submit">Submit</button>
+         </form>
+      </div>
+   </main>
 
    <script>
-
-      const toggleButton = document.getElementById('toggleButton');
-      toggleButton.addEventListener('click', function () {
-
-         if (document.body.classList.contains('dark-mode')) {
-            document.body.classList.remove('dark-mode');
-            toggleButton.style.backgroundColor = '#f0f0f0';
-            toggleButton.style.color = '#000';
-            toggleButton.textContent = 'Toggle Dark Mode';
-         } else {
-            document.body.classList.add('dark-mode');
-            toggleButton.style.backgroundColor = '#333';
-            toggleButton.style.color = '#fff';
-            toggleButton.textContent = 'Toggle Light Mode';
-         }
-      });
-      const style = document.createElement('style');
-      style.textContent = `
-            body.dark-mode {
-                background-color: #121212;
-                color: #ffffff;
-            }
-            body.dark-mode h1, body.dark-mode p {
-                color: #ffffff;
-            }
-
-            body.dark-mode a {
-                color: #bb86fc;
-            }
-            
-            /* Optional: Style the button in dark mode */
-            body.dark-mode #toggleButton {
-                background-color: #333;
-                color: #fff;
-            }
-        `;
-      document.head.appendChild(style);
+      function formsubmission(event) {
+         event.preventDefault();
+         alert('Form submitted successfully!');
+      }
    </script>
 </body>
 
