@@ -149,3 +149,15 @@ body {
   align-items: center;
   padding-bottom: 15px;
 }
+
+body {
+  background-color: #f4f7f6;
+}
+
+button {
+  background-color: #4CAF50;
+}
+
+a {
+  color: #56ccf2;
+}
