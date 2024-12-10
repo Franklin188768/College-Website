@@ -4,12 +4,43 @@
 <head>
   <title>Why go to college</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
   <script type="module" src="script.js"></script>
   <style>
     nav {
       background-color: #464545;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
     }
   </style>
 </head>
@@ -20,7 +51,6 @@
     <a href="/index.html">What?</a>
     <a href="/page2.html" aria-current="page">Why?</a>
     <a href="Contactme.html"> Contacts </a>
-
   </nav>
 
   <main>
@@ -36,6 +66,7 @@
 
     <p>The only way to know if you're fully prepared is by starting a <a
         href="https://www.etsy.com/listing/506314267/college-application-planner-15-page">planner</a>.</p>
+
     <div class="collegepage">
       <form>
         <fieldset>
@@ -70,7 +101,73 @@
       <div class="image-container">
         <img src="/images/planning pic.webp" width="300px" height="400px" />
       </div>
-    </div> States with free college institutes,
+    </div>
+
+    <h2>Interactive College Table</h2>
+    <p>Below is a dynamically generated table that showcases various college programs and their ratings.</p>
+
+    <label for="filter">Filter by Department: </label>
+    <select id="filter">
+      <option value="">All</option>
+      <option value="Technology">Technology</option>
+      <option value="Humanities">Humanities</option>
+      <option value="Management">Management</option>
+      <option value="Arts">Arts</option>
+    </select>
+
+    <table id="collegeTable">
+      <thead>
+        <tr>
+          <th>Program Name</th>
+          <th>Department</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be populated dynamically -->
+      </tbody>
+    </table>
+
+    <script>
+      // Array of objects representing the table data
+      const programs = [
+        { name: "Computer Science", department: "Technology", rating: 5 },
+        { name: "Psychology", department: "Humanities", rating: 4 },
+        { name: "Business Administration", department: "Management", rating: 4 },
+        { name: "Engineering", department: "Technology", rating: 5 },
+        { name: "Fine Arts", department: "Arts", rating: 3 },
+      ];
+
+      // Function to generate and populate the table
+      function populateTable(data) {
+        const tableBody = document.querySelector("#collegeTable tbody");
+        tableBody.innerHTML = ""; // Clear existing rows
+        data.forEach(program => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${program.name}</td>
+            <td>${program.department}</td>
+            <td>${program.rating}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      }
+
+      // Populate the table on page load
+      populateTable(programs);
+
+      // Filter functionality
+      const filter = document.getElementById("filter");
+      filter.addEventListener("change", () => {
+        const selectedDepartment = filter.value;
+        const filteredPrograms = selectedDepartment
+          ? programs.filter(program => program.department === selectedDepartment)
+          : programs;
+        populateTable(filteredPrograms);
+      });
+    </script>
+
+    States with free college institutes,
     Where do you go?
 
     <select id="States">
@@ -89,9 +186,6 @@
       });
     </script>
   </main>
-
-
-
 </body>
 
 </html>
